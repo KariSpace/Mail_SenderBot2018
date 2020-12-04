@@ -17,8 +17,7 @@ def email_sender(name, email, subject, type):
         print(response.status_code)
         print(response.body)
         print(response.headers)
-        return 0
-        
+        return 0       
     except Exception as error:
         print(str(error))
         return error
