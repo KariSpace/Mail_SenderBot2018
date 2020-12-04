@@ -15,10 +15,8 @@ def email_sender(name, email, subject, type):
     try:
         response = sg.send(message)
         print(response.status_code)
-        '''
         print(response.body)
         print(response.headers)
-        '''
         return 0
         
     except Exception as error:
