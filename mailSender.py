@@ -3,7 +3,7 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
 
-def emailSenderFunction(name, email, subject, type):
+def email_sender_function(name, email, subject, type):
     with open(str(type) + ".txt", 'r') as file:
         html = file.read().replace('\n', '').format(code=str(name))
     sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
